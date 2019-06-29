@@ -11,7 +11,6 @@ session = HTMLSession()
 r = session.get('https://www.studentagency.cz/data/wc/ybus-form/destinations-sk.json')
 site_data = r.json()
 
-
 def get_city_id(city_name, site_data):
     for dest in site_data['destinations']:
         for city in dest['cities']:
